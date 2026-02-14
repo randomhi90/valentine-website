@@ -94,9 +94,12 @@
   const yesBtn = document.getElementById("yes");
   const noBtn = document.getElementById("no");
   const message = document.getElementById("message");
+  const music = document.getElementById("bgmusic");
+
 
   yesBtn.addEventListener("click", function() {
     message.style.display = "block";
+    music.play();
     alert("You just made me the happiest person alive 😭❤️");
   });
 
