@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Be My Valentine ❤️</title>
+  <title>Be My Valentine da ye vairame ❤️</title>
   <style>
     body {
       background: linear-gradient(to right, #ff9a9e, #fecfef);
@@ -44,6 +44,22 @@
     }
   </style>
 </head>
+  <script>
+  setInterval(function() {
+    var heart = document.createElement("div");
+    heart.innerHTML = "💖";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = "-20px";
+    heart.style.fontSize = "24px";
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+      heart.remove();
+    }, 3000);
+  }, 500);
+</script>
+
 
 <body>
 
@@ -52,11 +68,29 @@
   <button id="yes" onclick="sayYes()">Yes ❤️</button>
   <button id="no" onmouseover="moveButton()">No 😢</button>
 
-  <div id="message">YAYYYYYY I LOVE YOUUUU 😭💘</div>
+  <div id="message">
+You don’t even realize how incredible u are, do u?
+How ur kindness feels like sunshine on my worst days.
+How ur smile fixes everything without trying.
+
+You are my sweetest surprise, my safest place, my biggest gift.
+I miss you in the quiet moments. I miss you in the loud ones too da chellam
+
+If loving u were a language, I would speak it forever.
+And if u could see yourself through my eyes…
+you would finally know you are my whole world. 💖
+You make my world brighter every single day.  
+    I choose you. Today. Tomorrow. Always. ❤️
+    LOVE YOU SOOOO MUCH DA PURUSHA💖
+</div>
+
 
 <script>
   function sayYes() {
     document.getElementById("message").style.display = "block";
+    alert("You just made me the happiest person alive 😭❤️");
+}
+
   }
 
   function moveButton() {
