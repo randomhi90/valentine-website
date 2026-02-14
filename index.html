@@ -1,14 +1,15 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Be My Valentine❤️</title>
+  <title>For My Purusha 💖</title>
+
   <style>
     body {
       background: linear-gradient(to right, #ff9a9e, #fecfef);
       text-align: center;
       font-family: Arial, sans-serif;
-      margin-top: 100px;
+      margin-top: 80px;
+      overflow: hidden;
     }
 
     h1 {
@@ -37,67 +38,69 @@
     }
 
     #message {
-      font-size: 30px;
+      font-size: 20px;
       color: white;
       margin-top: 30px;
       display: none;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
   </style>
 </head>
-  <script>
-  setInterval(function() {
-    var heart = document.createElement("div");
-    heart.innerHTML = "💖";
-    heart.style.position = "fixed";
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.top = "-20px";
-    heart.style.fontSize = "24px";
-    document.body.appendChild(heart);
-
-    setTimeout(function() {
-      heart.remove();
-    }, 3000);
-  }, 500);
-</script>
-
 
 <body>
 
-  <h1>Will You Be My Valentine da ye vairame? 💖</h1>
+  <h1>Will You Be My Valentine? 💖</h1>
 
-  <button id="yes" onclick="sayYes()">Yes ❤️</button>
-  <button id="no" onmouseover="moveButton()">No 😢</button>
+  <button id="yes">Yes ❤️</button>
+  <button id="no">No 😢</button>
 
   <div id="message">
-You don’t even realize how incredible u are, do u?
-How ur kindness feels like sunshine on my worst days.
-How ur smile fixes everything without trying.
+    <p>
+    You don’t even realize how incredible you are, do you?  
+    How your kindness feels like sunshine on my darkest days.  
+    How your smile fixes everything without even trying.
+    </p>
 
-You are my sweetest surprise, my safest place, my biggest gift.
-I miss you in the quiet moments. I miss you in the loud ones too da chellam
+    <p>
+    You are my sweetest surprise, my safest place, my biggest gift.  
+    I miss you in the quiet moments… and I miss you in the loud ones too, da chellam.
+    </p>
 
-If loving u were a language, I would speak it forever.
-And if u could see yourself through my eyes…
-you would finally know you are my whole world. 💖
-You make my world brighter every single day.  
-    I choose you. Today. Tomorrow. Always. ❤️
-    LOVE YOU SOOOO MUCH DA PURUSHA💖
-</div>
+    <p>
+    If loving you were a language, I would speak it forever.  
+    And if you could see yourself through my eyes,  
+    you would finally know that you are my whole world.
+    </p>
 
+    <p>
+    You make my life brighter every single day.  
+    I choose you. Today. Tomorrow. Always.
+    </p>
+
+    <p>
+    Love you sooo much da purusha 💖
+    </p>
+  </div>
 
 <script>
-  function sayYes() {
-    document.getElementById("message").style.display = "block";
+  const yesBtn = document.getElementById("yes");
+  const noBtn = document.getElementById("no");
+  const message = document.getElementById("message");
+
+  yesBtn.addEventListener("click", function() {
+    message.style.display = "block";
     alert("You just made me the happiest person alive 😭❤️");
-}
+  });
 
-  }
-
-  function moveButton() {
-    var button = document.getElementById("no");
-    button.style.top = Math.random() * window.innerHeight + "px";
-    button.style.left = Math.random() * window.innerWidth + "px";
-  }
+  noBtn.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
 </script>
 
 </body>
